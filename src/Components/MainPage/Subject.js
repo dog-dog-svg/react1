@@ -4,10 +4,19 @@ class Subject extends Component {
 	render() {
 		return (
 			<header>
-				{/* <h1>WEB</h1> */}
-				{/* Princess Mango */}
-        <h1>{this.props.title}</h1>
-         {this.props.sub}
+				<h1>
+					<a
+						href="/"
+						onClick={(e) => {
+							e.preventDefault();
+							this.props.OnChangePage();
+							console.log(this.props)
+						}}
+					>
+						{this.props.title}
+					</a>
+				</h1>
+				{this.props.sub}
 			</header>
 		);
 	}
